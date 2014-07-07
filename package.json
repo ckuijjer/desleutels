@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cheerio": "0.17.0",
-    "request": "2.36.0",
-    "rss": "0.3.2"
+    "cheerio": "0.12.4",
+    "request": "2.1.1",
+    "rss": "0.2.1"
   }
 }
