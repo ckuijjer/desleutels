@@ -22,12 +22,16 @@ request(url, function(err, response, body) {
             var address = $this.find('.AdressColumn h6').text();
             var addressBlock = $this.find('.AdressColumn').text();
             var price = $this.find('.PriceColumn h6').text().replace(/\n/g, '').replace(/\s+/g, ' ');
+            var rented = $this.find('.PriceColumn p.RedColor').text();
             var infoUrl = $this.find('.ReactColumn a').attr('href');
+            var photo = $this.find('.PhotoColumn img').attr('src');
+
+            var photoHtml = '<img src="' + photo + '" />';
 
             feed.item({
-                title: address + ' ' + price,
+                title: address + ' ' + price + ' ' + rented,
                 url: baseUrl + infoUrl,
-                description: addressBlock + ' ' + price, 
+                description: photoHtml + addressBlock + ' ' + price + ' ' + rented,
                 guid: infoUrl
             });
         });
